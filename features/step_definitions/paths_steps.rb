@@ -2,6 +2,10 @@ When("I am on the {string} page") do |page_name|
     visit page_path(page_name)
 end
 
+When("I am on the {string} for my user") do |page_name|
+    visit page_path(page_name)
+end
+
 Given("I visit the Create article page") do
     visit new_article_path
 end
@@ -12,7 +16,7 @@ def page_path(path)
         article_path(article_title)
     elsif path == 'Registration'
         new_user_registration_path
-    elsif path == 'My account'
+    elsif path == 'account page'
         user_path(@user)
     elsif path == 'Edit my account'
         edit_user_registration_path
