@@ -16,7 +16,7 @@ def page_path(path)
         article_path(article_title)
     elsif path == 'Registration'
         new_user_registration_path
-    elsif path == 'account page'
+    elsif path == 'account page' || path == 'My account'
         user_path(@user)
     elsif path == 'Edit my account'
         edit_user_registration_path
